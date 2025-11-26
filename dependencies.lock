@@ -1,0 +1,19 @@
+dependencies:
+  espressif/esp-dsp:
+    dependencies:
+    - name: idf
+      version: '>=4.2'
+    source:
+      path: /home/nero/code/c/arch/esp32/esp32-ai-bt-player/components/esp-dsp
+      type: local
+    version: '*'
+  idf:
+    source:
+      type: idf
+    version: 6.0.0
+direct_dependencies:
+- espressif/esp-dsp
+- idf
+manifest_hash: 198df09796841b01671ec02a21005f0d93971be22886585744355576551d4ea7
+target: esp32
+version: 2.0.0
