@@ -22,6 +22,7 @@
 #include "freertos/FreeRTOS.h"
 #include "freertos/task.h"
 #include "driver/i2s_std.h"
+#include "es8388.h"
 
 #include "sys/lock.h"
 
@@ -78,11 +79,7 @@ static esp_avrc_rn_evt_cap_mask_t s_avrc_peer_rn_cap;
 static uint8_t s_volume = 0;                 /* local volume value */
 
 static bool s_volume_notify;                 /* notify volume change or not */
-#ifndef CONFIG_EXAMPLE_A2DP_SINK_OUTPUT_INTERNAL_DAC
 i2s_chan_handle_t tx_chan = NULL;
-#else
-dac_continuous_handle_t tx_chan;
-#endif
 
 #if CONFIG_EXAMPLE_AVRCP_CT_COVER_ART_ENABLE
 static bool cover_art_connected = false;
@@ -193,7 +190,7 @@ static void bt_av_notify_evt_handler(uint8_t event_id, esp_avrc_rn_param_t *even
 
 	// if state is paused
 	if(event_parameter->playback == 0x02){
-		ssd_ui_show_paused();
+		//ssd_ui_show_paused();
 	}
 
         bt_av_playback_changed();
@@ -212,26 +209,12 @@ static void bt_av_notify_evt_handler(uint8_t event_id, esp_avrc_rn_param_t *even
 
 void bt_i2s_driver_install(void)
 {
-	/*
-    i2s_chan_config_t chan_cfg = I2S_CHANNEL_DEFAULT_CONFIG(I2S_NUM_0, I2S_ROLE_MASTER);
-    chan_cfg.auto_clear = true;
-    i2s_std_config_t std_cfg = {
-        .clk_cfg = I2S_STD_CLK_DEFAULT_CONFIG(44100),
-        .slot_cfg = I2S_STD_MSB_SLOT_DEFAULT_CONFIG(I2S_DATA_BIT_WIDTH_16BIT, I2S_SLOT_MODE_STEREO),
-        .gpio_cfg = {
-            .mclk = I2S_GPIO_UNUSED,
-            .bclk = CONFIG_EXAMPLE_I2S_BCK_PIN,
-            .ws = CONFIG_EXAMPLE_I2S_LRCK_PIN,
-            .dout = CONFIG_EXAMPLE_I2S_DATA_PIN,
-            .din = I2S_GPIO_UNUSED,
-            .invert_flags = {
-                .mclk_inv = false,
-                .bclk_inv = false,
-                .ws_inv = false,
-            },
-        },
-    };
-    */
+	/* configure ES8388 over i2c */
+	ESP_ERROR_CHECK(es8388_init());
+	ESP_ERROR_CHECK(es8388_pa_enable(true));
+
+	ESP_LOGI(BT_AV_TAG, "Successfully initialised ES8388");
+
     i2s_chan_config_t chan_cfg = I2S_CHANNEL_DEFAULT_CONFIG(I2S_NUM_0, I2S_ROLE_MASTER);
     chan_cfg.auto_clear = true;
     i2s_std_config_t std_cfg = {
@@ -254,6 +237,7 @@ void bt_i2s_driver_install(void)
     ESP_ERROR_CHECK(i2s_new_channel(&chan_cfg, &tx_chan, NULL));
     ESP_ERROR_CHECK(i2s_channel_init_std_mode(tx_chan, &std_cfg));
     ESP_ERROR_CHECK(i2s_channel_enable(tx_chan));
+	ESP_LOGI(BT_AV_TAG, "Successfully initialised I2S");
 }
 
 void bt_i2s_driver_uninstall(void)
@@ -279,7 +263,7 @@ static void volume_set_by_controller(uint8_t volume)
 
 	_lock_acquire(&s_connected_lock);
 	if(s_connected == 1){
-	    ssd_ui_show_volume((uint32_t)volume * 100 / 0x7f);
+	    //ssd_ui_show_volume((uint32_t)volume * 100 / 0x7f);
 	}
 	_lock_release(&s_connected_lock);
 
@@ -303,7 +287,7 @@ static void bt_av_hdl_a2d_evt(uint16_t event, void *p_param)
             bt_i2s_driver_uninstall();
             bt_i2s_task_shut_down();
 
-	    ssd_ui_show_disconnected();
+	    //ssd_ui_show_disconnected();
 		xConnHandle = xTimerCreate("conn_tim", pdMS_TO_TICKS(1000), pdFALSE, (void *)0, xConnect_cb);
 		xTimerStart(xConnHandle, 0);
 
@@ -311,7 +295,7 @@ static void bt_av_hdl_a2d_evt(uint16_t event, void *p_param)
             esp_bt_gap_set_scan_mode(ESP_BT_NON_CONNECTABLE, ESP_BT_NON_DISCOVERABLE);
             bt_i2s_task_start_up();
 
-	    ssd_ui_show_connected();
+	    //ssd_ui_show_connected();
 		xConnHandle = xTimerCreate("conn_tim", pdMS_TO_TICKS(1000), pdFALSE, (void *)0, xConnect_cb);
 		xTimerStart(xConnHandle, 0);
 
@@ -489,7 +473,7 @@ static void bt_av_hdl_avrc_ct_evt(uint16_t event, void *p_param)
 	// if we recieved a song title
 	_lock_acquire(&s_connected_lock);
 	if(rc->meta_rsp.attr_id == 0x01 && s_connected){
-		ssd_ui_show_title((char *)rc->meta_rsp.attr_text, strlen((const char *)rc->meta_rsp.attr_text));
+		//ssd_ui_show_title((char *)rc->meta_rsp.attr_text, strlen((const char *)rc->meta_rsp.attr_text));
 	}
 
 	_lock_release(&s_connected_lock);

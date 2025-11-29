@@ -1,0 +1,1012 @@
+[0;33m--- esp-idf-monitor 1.8.0 on /dev/ttyUSB0 115200[0m
+[0;33m--- Quit: Ctrl+] | Menu: Ctrl+T | Help: Ctrl+T followed by Ctrl+H[0m
+Executing action: monitor
+Running idf_monitor in directory /home/nero/code/c/arch/esp32/esp32-ai-bt-player
+Executing "/home/nero/.espressif/python_env/idf6.0_py3.13_env/bin/python /home/nero/code/c/arch/esp-idf/tools/idf_monitor.py -p /dev/ttyUSB0 -b 115200 --toolchain-prefix xtensa-esp32-elf- --target esp32 --revision 0 /home/nero/code/c/arch/esp32/esp32-ai-bt-player/build/a2dp_sink.elf /home/nero/code/c/arch/esp32/esp32-ai-bt-player/build/bootloader/bootloader.elf -m '/home/nero/.espressif/python_env/idf6.0_py3.13_env/bin/python' '/home/nero/code/c/arch/esp-idf/tools/idf.py' '-p' '/dev/ttyUSB0'"...
+ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x1f (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0040,len:6376
+load:0x40078000,len:15900
+ho 0 tail 12 room 4
+load:0x40080400,len:3920
+[0m--- 0x40080400: [0;33m_invalid_pc_placeholder[0m[0m at [0;32m/home/nero/code/c/arch/esp-idf/components/xtensa/xtensa_vectors.S[0m[0m:[1;31m2235[0m
+entry 0x40080644
+[0m--- 0x40080644: [0;33mcall_start_cpu0[0m[0m at [0;32m/home/nero/code/c/arch/esp-idf/components/bootloader/subproject/main/bootloader_start.c[0m[0m:[1;31m25[0m
+[0;32mI (29) boot: ESP-IDF v6.0-beta1-624-g6534932340 2nd stage bootloader[0m
+[0;32mI (29) boot: compile time Nov 29 2025 19:47:05[0m
+[0;32mI (29) boot: Multicore bootloader[0m
+[0;32mI (32) boot: chip revision: v3.1[0m
+[0;32mI (35) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (39) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (42) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (46) boot: Enabling RNG early entropy source...[0m
+[0;32mI (50) boot: Partition Table:[0m
+[0;32mI (53) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (59) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (66) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (72) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (79) boot: End of partition table[0m
+[0;32mI (82) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=2d0cch (184524) map[0m
+[0;32mI (155) esp_image: segment 1: paddr=0003d0f4 vaddr=3ffbdb60 size=02f24h ( 12068) load[0m
+[0;32mI (160) esp_image: segment 2: paddr=00040020 vaddr=400d0020 size=af680h (718464) map[0m
+[0;32mI (417) esp_image: segment 3: paddr=000ef6a8 vaddr=3ffc0a84 size=01c68h (  7272) load[0m
+[0;32mI (420) esp_image: segment 4: paddr=000f1318 vaddr=40080000 size=15e5ch ( 89692) load[0m
+[0;32mI (457) esp_image: segment 5: paddr=0010717c vaddr=50000000 size=00028h (    40) load[0m
+[0;32mI (468) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (469) boot: Disabling RNG early entropy source...[0m
+[0;32mI (479) cpu_start: Multicore app[0m
+[0;32mI (487) cpu_start: GPIO 3 and 1 are used as console UART I/O pins[0m
+[0;32mI (488) cpu_start: Pro cpu start user code[0m
+[0;32mI (488) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (490) app_init: Application information:[0m
+[0;32mI (493) app_init: Project name:     a2dp_sink[0m
+[0;32mI (497) app_init: App version:      7579192-dirty[0m
+[0;32mI (502) app_init: Compile time:     Nov 29 2025 19:46:25[0m
+[0;32mI (507) app_init: ELF file SHA256:  3a51a3dd8...[0m
+[0;32mI (511) app_init: ESP-IDF:          v6.0-beta1-624-g6534932340[0m
+[0;32mI (517) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (521) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (525) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (529) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (535) heap_init: At 3FFAFF10 len 000000F0 (0�ets Jul 29 2019 12:21:46[0m
+
+rst:0x1 (POWERON_RESET),boot:0x1f (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0040,len:6376
+load:0x40078000,len:15900
+ho 0 tail 12 room 4
+load:0x40080400,len:3920
+[0m--- 0x40080400: [0;33m_invalid_pc_placeholder[0m[0m at [0;32m/home/nero/code/c/arch/esp-idf/components/xtensa/xtensa_vectors.S[0m[0m:[1;31m2235[0m
+entry 0x40080644
+[0m--- 0x40080644: [0;33mcall_start_cpu0[0m[0m at [0;32m/home/nero/code/c/arch/esp-idf/components/bootloader/subproject/main/bootloader_start.c[0m[0m:[1;31m25[0m
+[0;32mI (29) boot: ESP-IDF v6.0-beta1-624-g6534932340 2nd stage bootloader[0m
+[0;32mI (29) boot: compile time Nov 29 2025 19:47:05[0m
+[0;32mI (29) boot: Multicore bootloader[0m
+[0;32mI (32) boot: chip revision: v3.1[0m
+[0;32mI (35) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (39) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (42) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (46) boot: Enabling RNG early entropy source...[0m
+[0;32mI (50) boot: Partition Table:[0m
+[0;32mI (53) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (59) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (66) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (72) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (79) boot: End of partition table[0m
+[0;32mI (82) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=2d0cch (184524) map[0m
+[0;32mI (155) esp_image: segment 1: paddr=0003d0f4 vaddr=3ffbdb60 size=02f24h ( 12068) load[0m
+[0;32mI (160) esp_image: segment 2: paddr=00040020 vaddr=400d0020 size=af680h (718464) map[0m
+[0;32mI (417) esp_image: segment 3: paddr=000ef6a8 vaddr=3ffc0a84 size=01c68h (  7272) load[0m
+[0;32mI (420) esp_image: segment 4: paddr=000f1318 vaddr=40080000 size=15e5ch ( 89692) load[0m
+[0;32mI (457) esp_image: segment 5: paddr=0010717c vaddr=50000000 size=00028h (    40) load[0m
+[0;32mI (468) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (469) boot: Disabling RNG early entropy source...[0m
+[0;32mI (479) cpu_start: Multicore app[0m
+[0;32mI (487) cpu_start: GPIO 3 and 1 are used as console UART I/O pins[0m
+[0;32mI (488) cpu_start: Pro cpu start user code[0m
+[0;32mI (488) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (490) app_init: Application information:[0m
+[0;32mI (493) app_init: Project name:     a2dp_sink[0m
+[0;32mI (497) app_init: App version:      7579192-dirty[0m
+[0;32mI (502) app_init: Compile time:     Nov 29 2025 19:46:25[0m
+[0;32mI (507) app_init: ELF file SHA256:  3a51a3dd8...[0m
+[0;32mI (511) app_init: ESP-IDF:          v6.0-beta1-624-g6534932340[0m
+[0;32mI (517) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (521) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (525) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (529) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (535) heap_init: At 3FFAFF10 len 000000F0 (0 KiB): DRAM[0m
+[0;32mI (540) heap_init: At 3FFB6388 len 00001C78 (7 KiB): DRAM[0m
+[0;32mI (545) heap_init: At 3FFB9A20 len 00004108 (16 KiB): DRAM[0m
+[0;32mI (550) heap_init: At 3FFCD580 len 00012A80 (74 KiB): DRAM[0m
+[0;32mI (555) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (561) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (566) heap_init: At 40095E5C len 0000A1A4 (40 KiB): IRAM[0m
+[0;32mI (573) spi_flash: detected chip: generic[0m
+[0;32mI (575) spi_flash: flash io: dio[0m
+[0;33mW (578) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (592) coexist: coex firmware version: 0cec0ed[0m
+[0;32mI (596) main_task: Started on CPU0[0m
+[0;32mI (606) main_task: Calling app_main()[0m
+[0;32mI (616) BTDM_INIT: BT controller compile version [f8ae2d0][0m
+[0;32mI (616) BTDM_INIT: Using main XTAL as clock source[0m
+[0;32mI (616) BTDM_INIT: Bluetooth MAC: 34:5f:45:26:75:aa[0m
+[0;32mI (626) phy_init: phy_version 4863,a3a4459,Oct 28 2025,14:30:06[0m
+[0;32mI (1276) BT_AV: Own address:[34:5f:45:26:75:aa][0m
+[0;32mI (1286) main_task: Returned from app_main()[0m
+[0;32mI (1286) DEBUG: created task on core 1[0m
+[0;32mI (1286) DEBUG APP: created task on core 1[0m
+[0;32mI (1286) RC_CT: AVRCP CT STATE: Init Complete[0m
+[0;32mI (1296) DEBUG APP: created task on core 1[0m
+[0;33mW (1296) BT_BTC: A2DP Enable with AVRC[0m
+[0;32mI (1296) RC_CT: AVRCP TG STATE: Init Complete[0m
+[0;32mI (1306) DEBUG APP: created task on core 1[0m
+[0;32mI (1316) BT_AV: A2DP PROF STATE: Init Complete[0m
+[0;32mI (1316) DEBUG APP: created task on core 1[0m
+[0;32mI (1316) BT_AV: event: 10[0m
+[0;32mI (1326) BT_AV: event: 10[0m
+[0;32mI (1326) BT_AV: event: 10[0m
+[0;32mI (1326) BT_AV: event: 10[0m
+[0;32mI (1326) BT_AV: Get delay report value: delay_value: 1200 * 1/10 ms[0m
+[0;32mI (1326) BT_AV: event: 23[0m
+[0;32mI (1336) DEBUG APP: created task on core 1[0m
+[0;32mI (1336) BT_AV: Set delay report value: success, delay_value: 1250 * 1/10 ms[0m
+[0;32mI (1346) DEBUG APP: created task on core 1[0m
+[0;33mW (9776) BT_HCI: hcif conn complete: hdl 0x80, st 0x0[0m
+[0;33mW (9776) BT_HCI: hcif link supv_to changed: hdl 0x80, supv_to 8000[0m
+[0;32mI (9786) BT_AV: ESP_BT_GAP_ACL_CONN_CMPL_STAT_EVT Connected to [cc:42:10:59:89:ee], status: 0x0[0m
+[0;32mI (9916) BT_AV: Encryption mode to [cc:42:10:59:89:ee] changed to E0[0m
+[0;32mI (10026) BT_AV: A2DP connection state: Connecting, [cc:42:10:59:89:ee][0m
+[0;32mI (10096) BT_AV: Successfully initialised ES8388[0m
+[0;32mI (10096) BT_AV: Successfully initialised I2S[0m
+reg  0: 0x12,
+reg  1: 0x50,
+reg  2: 0x 0,
+reg  3: 0x 9,
+reg  4: 0x3c,
+reg  5: 0x 0,
+reg  6: 0x 0,
+reg  7: 0x7c,
+reg  8: 0x 0,
+reg  9: 0xbb,
+reg 10: 0x 0,
+reg 11: 0x 2,
+reg 12: 0x c,
+reg 13: 0x 2,
+reg 14: 0x30,
+[0;33mW (10236) BT_APPL: new conn_srvc id:19, app_id:0[0m
+reg 15: 0x20,
+reg 16: 0x 0,
+reg 17: 0x 0,
+reg 18: 0x38,
+reg 19: 0xb0,
+reg 20: 0x32,
+reg 21: 0x 6,
+reg 22: 0x 0,
+reg 23: 0x18,
+reg 24: 0x 2,
+reg 25: 0x 0,
+reg 26: 0x 0,
+reg 27: 0x 0,
+reg 28: 0x 8,
+reg 29: 0x 0,
+reg 30: 0x1f,
+reg 31: 0xf7,
+reg 32: 0xfd,
+reg 33: 0xff,
+reg 34: 0x1f,
+reg 35: 0xf7,
+reg 36: 0xfd,
+reg 37: 0xff,
+reg 38: 0x 0,
+reg 39: 0x90,
+reg 40: 0x28,
+reg 41: 0x28,
+reg 42: 0x90,
+reg 43: 0x80,
+reg 44: 0x 0,
+reg 45: 0x 0,
+reg 46: 0x1e,
+reg 47: 0x1e,
+reg 48: 0x 0,
+reg 49: 0x 0,
+reg 50: 0x 0,
+reg 51: 0xaa,
+reg 52: 0xaa,
+[0;32mI (10626) DEBUG APP: created task on core 1[0m
+[0;32mI (10626) BT_AV: A2DP audio stream configuration, codec type: 0[0m
+[0;32mI (10626) BT_AV: Configure audio player: 0x2-0x1-0x1-0x1-0x1-2-53[0m
+[0;32mI (10626) BT_AV: Audio player configured, sample rate: 44100[0m
+[0;32mI (10636) DEBUG APP: created task on core 1[0m
+[0;32mI (10636) BT_AV: protocol service capabilities configured: 0x1 [0m
+[0;32mI (10646) BT_AV: Peer device support delay reporting[0m
+[0;32mI (10646) DEBUG APP: created task on core 1[0m
+[0;32mI (10646) BT_AV: A2DP connection state: Connected, [cc:42:10:59:89:ee][0m
+[0;32mI (10656) BT_APP_CORE: ringbuffer data empty! mode changed: RINGBUFFER_MODE_PREFETCHING[0m
+[0;32mI (10666) DEBUG APP: created task on core 1[0m
+[0;32mI (10666) DEBUG I2S: created task on core 0[0m
+[0;32mI (10666) RC_CT: AVRC conn_state event: state 1, [cc:42:10:59:89:ee][0m
+[0;32mI (10676) DEBUG APP: created task on core 1[0m
+[0;32mI (10686) RC_TG: AVRC conn_state evt: state 1, [cc:42:10:59:89:ee][0m
+[0;32mI (10686) DEBUG APP: created task on core 1[0m
+[0;32mI (10696) RC_CT: AVRC remote features 25b, TG features d1[0m
+[0;32mI (10696) DEBUG APP: created task on core 1[0m
+[0;32mI (10696) RC_TG: AVRC remote features: 25b, CT features: 2[0m
+[0;32mI (10706) DEBUG APP: created task on core 1[0m
+[0;32mI (10706) RC_TG: AVRC register event notification: 13, param: 0x0[0m
+[0;32mI (10716) DEBUG APP: created task on core 1[0m
+[0;32mI (10716) RC_CT: remote rn_cap: count 8, bitmask 0x1f26[0m
+[0;32mI (10726) DEBUG APP: created task on core 1[0m
+[0;32mI (10796) RC_TG: AVRC set absolute volume: 59%[0m
+[0;32mI (10796) RC_TG: Volume is set by remote controller to: 59%[0m
+[0;32mI (10796) RC_TG: volume is 0.598425 (12 dB)[0m
+[0;32mI (10796) DEBUG APP: created task on core 1[0m
+[0;32mI (10806) RC_CT: AVRC metadata rsp: attribute id 0x1, Alice In Chains  Nutshell MTV Unplugged  HD Video, strlen 49[0m
+[0;32mI (10816) DEBUG APP: created task on core 1[0m
+[0;32mI (10816) RC_CT: AVRC metadata rsp: attribute id 0x20, , strlen 0[0m
+[0;32mI (10826) DEBUG APP: created task on core 1[0m
+[0;32mI (11666) DEBUG: changing internal state[0m
+[0;33mW (13436) BT_HCI: hci cmd send: sniff: hdl 0x80, intv(400 800)[0m
+[0;33mW (13446) BT_HCI: hcif mode change: hdl 0x80, mode 2, intv 800, status 0x0[0m
+[0;32mI (13446) BT_AV: ESP_BT_GAP_MODE_CHG_EVT mode: 2, interval: 500.00 ms[0m
+[0;33mW (17676) BT_HCI: hcif mode change: hdl 0x80, mode 0, intv 0, status 0x0[0m
+[0;32mI (17686) BT_AV: ESP_BT_GAP_MODE_CHG_EVT mode: 0, interval: 0.00 ms[0m
+[0;32mI (17706) BT_LOG: bta_av_link_role_ok hndl:x41 role:1 conn_audio:x1 bits:1 features:x864b[0m
+
+[0;33mW (17706) BT_APPL: new conn_srvc id:19, app_id:1[0m
+[0;32mI (17716) RC_CT: AVRC event notification: 1[0m
+[0;32mI (17716) BT_AV: Playback status changed: 0x1[0m
+[0;32mI (17716) DEBUG APP: created task on core 1[0m
+[0;32mI (17716) RC_CT: AVRC event notification: 5[0m
+[0;32mI (17726) BT_AV: Play position changed: 161168-ms[0m
+[0;32mI (17726) DEBUG APP: created task on core 1[0m
+[0;32mI (17736) RC_CT: AVRC event notification: 2[0m
+[0;32mI (17736) DEBUG APP: created task on core 1[0m
+[0;32mI (17736) BT_AV: A2DP audio state: Started[0m
+[0;32mI (17746) DEBUG APP: created task on core 1[0m
+[0;32mI (17766) RC_CT: AVRC metadata rsp: attribute id 0x1, Alice In Chains  Nutshell MTV Unplugged  HD Video, strlen 49[0m
+[0;32mI (17766) DEBUG APP: created task on core 1[0m
+[0;32mI (17766) RC_CT: AVRC metadata rsp: attribute id 0x20, , strlen 0[0m
+[0;32mI (17776) DEBUG APP: created task on core 1[0m
+[0;32mI (17846) BT_APP_CORE: ringbuffer data increased! mode changed: RINGBUFFER_MODE_PROCESSING[0m
+[0;32mI (17846) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (17846) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (17856) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (17856) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (17866) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (17866) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (17876) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (17886) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (17896) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (17896) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (17906) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (17916) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (17926) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (17926) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (17946) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (17946) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (17956) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (17966) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (17976) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (17976) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (17986) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (17996) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (18006) DEBUG: read 544 items, volume 0.598425 (12 dB)[0m
+[0;32mI (18016) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (18026) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (18026) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (18036) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (18046) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (18056) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (18066) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (18076) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (18076) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (18086) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (18096) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (18106) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (18106) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (18126) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (18126) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (18136) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (18146) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (18156) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (18156) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (18166) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (18176) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (18186) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (18196) DEBUG: read 544 items, volume 0.598425 (12 dB)[0m
+[0;32mI (18196) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (18206) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (18216) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (18226) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (18226) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (18246) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (18246) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (18256) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (18266) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (18276) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (18276) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (18286) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (18296) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (18306) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (18316) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (18326) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (18326) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (18336) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (18346) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (18356) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (18356) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (18376) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (18376) DEBUG: read 544 items, volume 0.598425 (12 dB)[0m
+[0;32mI (18386) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (18396) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (18396) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (18406) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (18416) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (18426) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (18436) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (18446) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (18446) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (18456) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (18466) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (18476) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (18476) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (18496) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (18496) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (18506) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (18516) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (18526) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (18526) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (18536) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (18546) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (18556) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (18566) DEBUG: read 544 items, volume 0.598425 (12 dB)[0m
+[0;32mI (18576) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (18576) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (18586) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (18596) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (18606) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (18616) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (18626) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (18626) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (18636) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (18646) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (18656) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (18656) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (18666) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (18676) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (18686) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (18696) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (18706) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (18706) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (18716) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (18726) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (18736) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (18746) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (18756) DEBUG: read 544 items, volume 0.598425 (12 dB)[0m
+[0;32mI (18756) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (18766) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (18776) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (18776) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (18786) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (18796) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (18806) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (18816) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (18826) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (18826) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (18836) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (18846) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (18856) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (18866) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (18876) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (18876) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (18886) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (18896) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (18906) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (18906) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (18926) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (18926) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (18936) DEBUG: read 544 items, volume 0.598425 (12 dB)[0m
+[0;32mI (18946) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (18946) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (18956) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (18966) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (18976) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (18986) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (18996) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (18996) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (19006) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (19016) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (19026) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (19026) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (19046) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (19046) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (19056) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (19066) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (19076) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (19076) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (19086) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (19096) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (19106) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (19116) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (19126) DEBUG: read 544 items, volume 0.598425 (12 dB)[0m
+[0;32mI (19126) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (19136) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (19146) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (19146) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (19156) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (19166) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (19176) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (19186) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (19196) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (19196) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (19206) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (19216) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (19226) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (19236) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (19246) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (19246) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (19256) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (19266) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (19276) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (19276) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (19296) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (19296) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (19306) DEBUG: read 544 items, volume 0.598425 (12 dB)[0m
+[0;32mI (19316) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (19326) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (19326) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (19336) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (19346) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (19356) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (19366) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (19376) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (19376) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (19386) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (19396) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (19406) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (19416) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (19426) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (19426) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (19436) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (19446) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (19456) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (19456) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (19466) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (19476) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (19486) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (19496) DEBUG: read 544 items, volume 0.598425 (12 dB)[0m
+[0;32mI (19496) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (19506) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (19516) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (19526) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (19526) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (19546) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (19546) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (19556) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (19566) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (19576) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (19576) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (19586) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (19596) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (19606) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (19616) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (19626) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (19626) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (19636) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (19646) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (19656) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (19666) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (19676) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (19676) DEBUG: read 544 items, volume 0.598425 (12 dB)[0m
+[0;32mI (19686) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (19696) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (19696) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (19706) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (19716) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (19726) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (19736) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (19736) BT_AV: Audio packet count: 100[0m
+[0;32mI (19746) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (19746) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (19756) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (19766) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (19776) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (19786) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (19796) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (19796) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (19806) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (19816) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (19826) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (19826) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (19846) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (19846) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (19856) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (19866) DEBUG: read 544 items, volume 0.598425 (12 dB)[0m
+[0;32mI (19866) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (19876) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (19886) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (19896) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (19896) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (19916) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (19916) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (19926) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (19936) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (19946) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (19946) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (19956) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (19966) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (19976) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (19986) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (19996) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (19996) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (20006) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (20016) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (20026) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (20036) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (20046) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (20046) DEBUG: read 544 items, volume 0.598425 (12 dB)[0m
+[0;32mI (20056) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (20066) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (20076) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (20076) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (20096) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (20096) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (20106) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (20116) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (20126) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (20126) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (20136) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (20146) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (20156) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (20166) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (20176) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (20176) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (20186) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (20196) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (20206) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (20216) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (20226) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (20226) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (20236) DEBUG: read 544 items, volume 0.598425 (12 dB)[0m
+[0;32mI (20246) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (20246) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (20256) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (20266) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (20276) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (20286) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (20296) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (20296) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (20306) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (20316) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (20326) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (20336) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (20346) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (20346) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (20356) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (20366) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (20376) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (20376) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (20386) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (20396) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (20406) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (20416) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (20426) DEBUG: read 544 items, volume 0.598425 (12 dB)[0m
+[0;32mI (20426) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (20436) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (20446) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (20446) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (20466) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (20466) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (20476) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (20486) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (20496) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (20496) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (20506) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (20516) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (20526) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (20536) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (20546) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (20546) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (20556) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (20566) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (20576) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (20586) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (20596) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (20596) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (20606) DEBUG: read 544 items, volume 0.598425 (12 dB)[0m
+[0;32mI (20616) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (20616) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (20626) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (20636) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (20646) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (20656) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (20666) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (20666) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (20676) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (20686) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (20696) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (20696) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (20716) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (20716) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (20726) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (20736) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (20746) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (20746) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (20756) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (20766) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (20776) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (20786) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (20796) DEBUG: read 544 items, volume 0.598425 (12 dB)[0m
+[0;32mI (20796) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (20806) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (20816) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (20826) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (20836) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (20846) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (20846) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (20856) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (20866) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (20876) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (20876) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (20896) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (20896) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (20906) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (20916) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (20926) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (20926) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (20936) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (20946) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (20956) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (20966) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (20976) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (20976) DEBUG: read 544 items, volume 0.598425 (12 dB)[0m
+[0;32mI (20986) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (20996) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (21006) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (21016) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (21016) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (21026) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (21036) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (21046) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (21046) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (21056) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (21066) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (21076) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (21086) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (21096) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (21096) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (21106) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (21116) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (21126) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (21126) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (21146) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (21146) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (21156) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (21166) DEBUG: read 544 items, volume 0.598425 (12 dB)[0m
+[0;32mI (21166) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (21176) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (21186) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (21196) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (21206) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (21216) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (21216) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (21226) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (21236) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (21246) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (21246) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (21266) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (21266) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (21276) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (21286) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (21296) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (21296) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (21306) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (21316) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (21326) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (21336) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (21346) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (21346) DEBUG: read 544 items, volume 0.598425 (12 dB)[0m
+[0;32mI (21356) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (21366) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (21376) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (21386) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (21396) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (21396) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (21406) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (21416) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (21426) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (21426) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (21436) RC_CT: AVRC event notification: 1[0m
+[0;32mI (21436) BT_AV: Playback status changed: 0x2[0m
+[0;32mI (21436) DEBUG APP: created task on core 1[0m
+[0;32mI (21436) RC_CT: AVRC event notification: 5[0m
+[0;32mI (21446) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (21446) BT_AV: Play position changed: 165714-ms[0m
+[0;32mI (21446) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (21456) DEBUG APP: created task on core 1[0m
+[0;32mI (21456) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (21466) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (21476) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (21476) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (21486) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (21496) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (21506) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (21516) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (21526) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (21526) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (21536) DEBUG: read 544 items, volume 0.598425 (12 dB)[0m
+[0;32mI (21546) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (21546) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (21556) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (21566) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (21576) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (21586) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (21596) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (21596) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (21606) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (21616) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (21626) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (21636) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (21646) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (21646) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (21656) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (21666) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (21676) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (21676) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (21696) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (21696) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (21706) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (21716) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (21726) DEBUG: read 544 items, volume 0.598425 (12 dB)[0m
+[0;32mI (21726) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (21736) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (21736) BT_AV: Audio packet count: 200[0m
+[0;32mI (21746) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (21756) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (21766) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (21766) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (21776) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (21786) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (21796) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (21796) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (21816) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (21816) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (21826) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (21836) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (21846) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (21846) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (21856) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (21866) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (21876) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (21886) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (21896) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (21896) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (21906) DEBUG: read 544 items, volume 0.598425 (12 dB)[0m
+[0;32mI (21916) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (21916) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (21926) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (21936) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (21946) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (21956) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (21966) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (21966) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (21976) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (21986) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (21996) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (22006) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (22016) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (22016) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (22026) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (22036) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (22046) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (22046) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (22066) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (22066) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (22076) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (22086) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (22096) DEBUG: read 544 items, volume 0.598425 (12 dB)[0m
+[0;32mI (22096) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (22106) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (22116) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (22126) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (22136) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (22146) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (22146) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (22156) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (22166) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (22176) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (22186) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (22196) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (22196) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (22206) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (22216) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (22226) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (22226) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (22246) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (22246) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (22256) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (22266) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (22276) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (22276) DEBUG: read 544 items, volume 0.598425 (12 dB)[0m
+[0;32mI (22286) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (22296) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (22296) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (22316) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (22316) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (22326) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (22336) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (22346) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (22346) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (22356) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (22366) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (22376) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (22386) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (22396) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (22396) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (22406) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (22416) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (22426) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (22436) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (22446) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (22446) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (22456) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (22466) DEBUG: read 544 items, volume 0.598425 (12 dB)[0m
+[0;32mI (22466) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (22476) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (22486) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (22496) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (22506) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (22516) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (22516) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (22526) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (22536) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (22546) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (22556) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (22566) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (22566) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (22576) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (22586) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (22596) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (22596) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (22616) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (22616) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (22626) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (22636) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (22646) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (22646) DEBUG: read 544 items, volume 0.598425 (12 dB)[0m
+[0;32mI (22656) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (22666) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (22666) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (22686) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (22686) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (22696) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (22706) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (22716) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (22716) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (22726) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (22736) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (22746) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (22756) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (22766) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (22766) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (22776) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (22786) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (22796) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (22806) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (22816) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (22816) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (22826) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (22836) DEBUG: read 544 items, volume 0.598425 (12 dB)[0m
+[0;32mI (22846) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (22856) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (22866) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (22866) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (22876) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (22886) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (22896) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (22896) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (22906) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (22916) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (22926) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (22936) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (22946) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (22946) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (22956) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (22966) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (22976) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (22986) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (22996) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (22996) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (23006) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (23016) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (23026) DEBUG: read 544 items, volume 0.598425 (12 dB)[0m
+[0;32mI (23026) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (23036) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (23046) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (23056) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (23066) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (23066) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (23076) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (23086) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (23096) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (23096) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (23116) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (23116) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (23126) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (23136) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (23146) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (23146) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (23156) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (23166) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (23176) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (23186) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (23196) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (23196) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (23206) DEBUG: read 544 items, volume 0.598425 (12 dB)[0m
+[0;32mI (23216) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (23216) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (23236) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (23236) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (23246) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (23256) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (23266) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (23266) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (23276) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (23286) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (23296) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (23306) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (23316) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (23316) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (23326) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (23336) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (23346) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (23356) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (23366) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (23366) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (23376) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (23386) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (23396) DEBUG: read 544 items, volume 0.598425 (12 dB)[0m
+[0;32mI (23396) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (23406) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (23416) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (23426) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (23436) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (23436) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (23446) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (23456) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (23466) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (23466) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (23486) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (23486) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (23496) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (23506) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (23516) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (23516) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (23526) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (23536) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (23546) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (23556) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (23566) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (23566) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (23576) DEBUG: read 544 items, volume 0.598425 (12 dB)[0m
+[0;32mI (23586) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (23596) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (23606) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (23616) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (23616) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (23626) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (23636) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (23646) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (23646) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (23666) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (23666) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (23676) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (23686) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (23696) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (23696) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (23706) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (23716) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (23726) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (23736) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (23736) BT_AV: Audio packet count: 300[0m
+[0;32mI (23746) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (23746) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (23756) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (23766) DEBUG: read 544 items, volume 0.598425 (12 dB)[0m
+[0;32mI (23766) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (23786) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (23786) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (23796) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (23806) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (23816) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (23816) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (23826) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0;32mI (23836) DEBUG: read 720 items, volume 0.598425 (12 dB)[0m
+[0m

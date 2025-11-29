@@ -25,7 +25,7 @@
 #include "esp_a2dp_api.h"
 #include "esp_avrc_api.h"
 
-#include "ssd_ui.h"
+#include "driver/gpio.h"
 
 /* global variables */
 const char local_device_name[] = CONFIG_EXAMPLE_LOCAL_DEVICE_NAME;
@@ -206,8 +206,6 @@ static void bt_av_hdl_stack_evt(uint16_t event, void *p_param)
 
 void app_main(void)
 {
-	ssd_ui_show_init_start();
-
 	char bda_str[18] = {0};
 	/* initialize NVS — it is used to store PHY calibration data */
 	esp_err_t err = nvs_flash_init();
@@ -216,6 +214,9 @@ void app_main(void)
 		err = nvs_flash_init();
 	}
 	ESP_ERROR_CHECK(err);
+	gpio_reset_pin(GPIO_NUM_21);
+	gpio_set_direction(GPIO_NUM_21, GPIO_MODE_OUTPUT);
+	gpio_set_level(GPIO_NUM_21, 1);
 
 	/*
 	* This example only uses the functions of Classical Bluetooth.
@@ -270,7 +271,4 @@ void app_main(void)
 
 	/* bluetooth device name, connection mode and profile set up */
 	bt_app_work_dispatch(bt_av_hdl_stack_evt, BT_APP_EVT_STACK_UP, NULL, 0, NULL);
-
-	ssd_ui_show_init_finished();
-
 }
